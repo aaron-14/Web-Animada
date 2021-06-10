@@ -1,0 +1,73 @@
+.popup {
+    padding: 10px;
+    min-width: 300px;
+    min-height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+    z-index: -1;
+    /* 1px higher than the overlay layer */
+    opacity: 0;
+    color: lightseagreen;
+    border: solid 2px lightseagreen;
+  }
+  
+  .overlay_canvas {
+    content: "";
+    position: fixed;
+    /* could also be absolute */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .overlay_popup.popup-open .overlay_canvas,
+  .popup-open .popup {
+    opacity: 1;
+    z-index: 11
+  }
+  
+  .close_btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 10px;
+    color: #000;
+    outline: none !important;
+    text-shadow: none;
+    min-width: 1px;
+    font-size: 21px;
+    color: #8C8C8C;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  #boton-anuncio{
+    background-color: black;
+    border: solid 2px rgb(0, 231, 220);
+    color: lightseagreen;
+    width: 50%;
+    height: 23px;
+    width: 120px;
+    height: 40px;
+    background: rgb(0, 0, 0);
+    transition: width 0.2s;
+  }
+  #boton-anuncio:hover{
+    background-color: lightseagreen;
+    color: black;
+    width: 100%;
+
+  }
+  
